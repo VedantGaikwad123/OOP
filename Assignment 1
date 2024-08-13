@@ -10,8 +10,8 @@ private:
 public:
    void accept();
    void display();
-   void widraw();
-   void deposite();
+   void withdraw();
+   void deposit();
         mybank(){
             accountno;
             amount;
@@ -33,11 +33,11 @@ public:
         cout<<name<<accountno<<amount;
         
         }
-        void mybank::widraw(){
+        void mybank::withdraw(){
         int ac,am;
         cout<<"enter acount number";
         cin>>ac;
-        cout<<"enter amount you want to widraw";
+        cout<<"enter amount you want to withdraw";
         cin>>am;
         for(i=0;i<100;i++)
         {
@@ -48,12 +48,12 @@ public:
             }
         }
         }
-        void mybank::deposite(){
+        void mybank::deposit(){
         int acc,amt;
         
         cout<<"enter account no";
         cin>>acc;
-        cout<<"enter amount you want to deposite";
+        cout<<"enter amount you want to deposit";
         cin>>amt;
         for(i=0;i<100;i++)
         {
@@ -67,7 +67,7 @@ int main() {
    
     int ch;
     while(1){
-        cout<<"\nAccept: \ndisplay: \nWidraw: \nDeposite";
+        cout<<"\nAccept: \ndisplay: \nWithdraw: \nDeposit";
         cout<<"enter your choice";
         cin>>ch;
         
@@ -79,10 +79,10 @@ int main() {
             m[i].display();
             break;
             case 3:
-            m[i].widraw();
+            m[i].withdraw();
             break;
             case 4:
-            m[i].deposite();
+            m[i].deposit();
             case 5:
             cout<<"invlid choice";
             
