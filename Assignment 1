@@ -1,0 +1,94 @@
+#include <iostream>
+using namespace std;
+int i;
+ class mybank{
+private:
+    int accountno,amount;
+    string name;
+    
+ 
+public:
+   void accept();
+   void display();
+   void widraw();
+   void deposite();
+        mybank(){
+            accountno;
+            amount;
+            name;
+            
+        }
+}m[100];
+        void mybank::accept()
+        {   int n;
+        
+            cout<<"\tenter your name\n";
+            cout<<"\tenter acc number\n";
+            cout<<"\tenter amount\n";
+            cin>>name;
+            cin>>accountno;
+            cin>>amount;
+        }
+        void mybank::display(){
+        cout<<name<<accountno<<amount;
+        
+        }
+        void mybank::widraw(){
+        int ac,am;
+        cout<<"enter acount number";
+        cin>>ac;
+        cout<<"enter amount you want to widraw";
+        cin>>am;
+        for(i=0;i<100;i++)
+        {
+            if (m[i].accountno=ac)
+            {
+                m[i].amount=m[i].amount-am;
+                break;
+            }
+        }
+        }
+        void mybank::deposite(){
+        int acc,amt;
+        
+        cout<<"enter account no";
+        cin>>acc;
+        cout<<"enter amount you want to deposite";
+        cin>>amt;
+        for(i=0;i<100;i++)
+        {
+            if(m[i].accountno==acc)
+            m[i].amount=m[i].amount+amt;
+            
+            break;
+        }
+        }
+int main() {
+   
+    int ch;
+    while(1){
+        cout<<"\nAccept: \ndisplay: \nWidraw: \nDeposite";
+        cout<<"enter your choice";
+        cin>>ch;
+        
+        switch(ch){
+            case 1:
+            m[i].accept();
+            break;
+            case 2:
+            m[i].display();
+            break;
+            case 3:
+            m[i].widraw();
+            break;
+            case 4:
+            m[i].deposite();
+            case 5:
+            cout<<"invlid choice";
+            
+        }
+    }
+    
+
+    return 0;
+}
